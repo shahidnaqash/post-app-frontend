@@ -1,0 +1,41 @@
+                    <Grid.Row key={post.id}  >
+                        <Grid.Column   >
+                            <Card centered className='cardWidth'>
+                                <Card.Content>
+                                    <Image
+                                        floated='right'
+                                        size='mini'
+                                        src='https://www.w3schools.com/howto/img_avatar.png'
+                                    />
+                                    <Card.Header>{post.username}</Card.Header>
+                                    {/* <Card.Meta>{moment(post.createAt)}</Card.Meta> */}
+                                    <Card.Description>
+                                        {post.body}
+                                    </Card.Description>
+                                </Card.Content>
+                                <Card.Content extra>
+                                   
+                                        <Button as='div' labelPosition='right' size='mini'>
+                                            <Button color='red'  size='mini' onClick={e=>handleLike(post.id)} >
+                                                <Icon name='heart'  />
+                                            </Button>
+                                            <Label as='a' basic color='red' pointing='left'>
+                                                {post.likeCount}
+                                            </Label>
+                                        </Button>
+                                        
+                                        <Button as='div' labelPosition='right' size='mini'>
+
+                                        <Button color='blue' size='mini'>
+                                              <i className="comments outline icon"></i>
+                                            </Button>
+                                            <Label as='a' basic color='blue' pointing='left'>
+                                                {post.commentCount}
+                                            </Label>
+                                        </Button>
+                                   
+                                </Card.Content>
+                            </Card>
+                        </Grid.Column>
+                 
+                    </Grid.Row>
